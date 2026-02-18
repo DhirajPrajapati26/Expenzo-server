@@ -16,7 +16,11 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: [
+      "http://localhost:5173",
+      "expence-tracker-omega-rust.vercel.app",
+      "https://expenzo.dhirajprajapati.in",
+    ],
     credentials: true,
   }),
 );
